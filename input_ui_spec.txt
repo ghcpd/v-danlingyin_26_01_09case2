@@ -1,0 +1,76 @@
+AI Portal Website Specification (v1.0)
+
+Product Overview:
+This is a web-based AI portal that allows users to interact with an AI assistant through chat.
+The product is similar in concept to Doubao / ChatGPT-style AI platforms.
+
+──────────────────────────────────── Pages & Layout ────────────────────────────────────
+
+1. Global Layout
+- Fixed header with:
+  - Product logo/title
+  - Navigation menu
+- Main content area
+- Responsive layout for mobile and desktop
+
+2. Home Page (/)
+- Intro section describing the AI assistant
+- Primary CTA button: "Start Chatting"
+- Feature highlights (3–4 items, static content)
+
+3. Chat Page (/chat)
+- Chat message list
+  - User messages (right aligned)
+  - AI messages (left aligned)
+- Input area:
+  - Text input
+  - Send button
+- Loading state when AI is "responding"
+- Mock AI responses (no real API)
+- Auto-scroll to latest message
+
+4. Conversation History Page (/history)
+- List of past conversations
+- Each item shows:
+  - Conversation title
+  - Last updated time
+- Click an item to open it in Chat Page
+
+5. Settings Page (/settings)
+- Toggle options (mock):
+  - Dark / Light mode
+  - Language selection
+- Save settings locally (mock persistence)
+
+──────────────────────────────────── Data & State ────────────────────────────────────
+
+- Conversation data:
+  - id
+  - title
+  - messages[]
+- Message structure:
+  - id
+  - role: "user" | "assistant"
+  - content
+  - timestamp
+
+- Global state:
+  - Current conversation
+  - Conversation list
+  - UI settings (theme, language)
+
+──────────────────────────────────── UI & Interaction Rules ────────────────────────────────────
+
+- All interactions must update state correctly
+- Chat must feel real-time (use setTimeout to mock AI delay)
+- Responsive design required
+- No backend API calls allowed
+
+──────────────────────────────────── Non-Functional Requirements ────────────────────────────────────
+
+- Use mock data only
+- All TypeScript types must be explicit
+- Routes must be lazy-loaded
+- App must run without runtime errors
+
+──────────────────────────────────── End of Specification ────────────────────────────────────
