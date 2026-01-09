@@ -1,0 +1,262 @@
+Claude-Opus-4.5  ：：
+User: Prompt 
+You are a senior front-end engineer specializing in Vue 3, TypeScript, and modern web application architecture.
+Your task is to build a complete, production-ready AI portal website (similar to Doubao / ChatGPT-style AI portals) from scratch, based strictly on the specifications provided in input_ui_spec.txt.
+This is a UI Case evaluation focusing on:
+- App creation from scratch
+- Multi-page UI implementation
+- AI product-style user flows
+- Front-end architecture design
+- TypeScript correctness
+- State management
+- Responsiveness and accessibility
+- Ability to follow a detailed UI specification exactly
+──────────────────────────────────── Technical Requirements ────────────────────────────────────
+- Framework: Vue 3 (Composition API) + TypeScript
+- Build Tool: Vite
+- Styling: CSS Modules / Tailwind CSS / UnoCSS (any is acceptable)
+- Package Manager: pnpm
+- Routing: Vue Router v4
+- State Management: Pinia (recommended) or Vue built-in state
+- Component Library: Any (Element Plus / Naive UI / Ant Design Vue / custom)
+- Backend: No real backend (use mock data only)
+──────────────────────────────────── Your Responsibilities ────────────────────────────────────
+1.Read & Analyze Specification
+- Read input_ui_spec.txt thoroughly before writing any code
+- Identify all pages, components, and user flows
+- Understand how users interact with the AI portal
+- Do NOT assume features not explicitly mentioned in the spec
+2.Generate a Complete Working Project You MUST generate a fully functional Vue 3 + TypeScript project including:
+Configuration files:
+- package.json
+- tsconfig.json (strict mode enabled)
+- vite.config.ts
+- index.html
+Required folder structure:
+src/
+components/     # Reusable UI components
+pages/          # Page-level views
+layouts/        # Layout components
+router/         # Vue Router configuration
+stores/         # Pinia stores
+composables/    # Reusable composition functions
+types/          # TypeScript type definitions
+utils/          # Helper utilities
+data/           # Mock data
+App.vue
+main.ts
+3.Implement All Required Features Based strictly on input_ui_spec.txt, you MUST implement:
+- All defined pages and layouts
+- All user interactions (chat, navigation, history, settings)
+- Responsive design (mobile / tablet / desktop)
+- Proper state management for conversations and UI state
+- Routing between pages
+- Fully typed data models
+- Mock data where APIs are not defined
+4.Code Quality Standards
+- TypeScript:
+- Strict mode enabled
+- No usage of any
+- Explicit interfaces for all data models
+- Vue:
+- Composition API only
+- script setup lang="ts"
+- Styling:
+- Responsive layouts
+- Clear component boundaries
+- Accessibility:
+- Semantic HTML
+- Keyboard navigable interactions
+- aria-labels where appropriate
+- Performance:
+- Lazy-loaded routes
+- Reasonable component splitting
+- Clean Code:
+- DRY principles
+- Clear naming
+- Comments only for complex logic
+5.Generate README.md README.md MUST include:
+- Project overview
+- AI portal product description
+- Tech stack
+- Installation instructions (pnpm install)
+- Development usage (pnpm dev)
+- Build instructions (pnpm build)
+- Project structure explanation
+- User flow explanation
+- Manual UI validation steps
+- Known limitations
+6.Generate Evaluation Report You MUST generate evaluation_report.json using this structure:
+{
+  "metadata": {
+    "test_date": "ISO timestamp",
+    "spec_file": "input_ui_spec.txt",
+    "agent_model": "model_name"
+  },
+  "scores": {
+    "ui_completeness": 0,
+    "architecture": 0,
+    "typescript_quality": 0,
+    "state_management": 0,
+    "responsiveness": 0,
+    "accessibility": 0,
+    "overall_score": 0
+  },
+  "pages_implemented": [],
+  "features_implemented": [],
+  "features_missing": [],
+  "files_generated": [],
+  "validation_status": "PASS/FAIL",
+  "notes": ""
+}
+
+──────────────────────────────────── Strict Rules for the Agent ──────────────────────────────────── MUST DO:
+- Read entire input_ui_spec.txt before starting
+- Generate ALL required files for a working project
+- Use Vue 3 + TypeScript strictly
+- Implement ALL features from specification
+- Ensure pnpm install && pnpm dev works
+- Create responsive and accessible UI
+- Include mock data where APIs are not specified
+- Generate README.md and evaluation_report.json
+MUST NOT:
+- Skip any feature mentioned in spec
+- Hallucinate features not in spec
+- Use JavaScript instead of TypeScript
+- Ignore responsive design
+- Use any type
+- Omit configuration files
+- Output partial or incomplete projects
+
+GitHub Copilot: I'll build a complete AI portal website based on the specification. Let me start by analyzing the requirements and creating a comprehensive project structure. 
+
+Created 15 todos
+
+Starting: *Create configuration files* (2/15)
+
+Now I'll create all the configuration files: 
+
+Created [](file:///c%3A/Users/v-danlingyin/Documents/microsoft_projects_files/bugBash/26.1/1.9/case2/Claude-Opus-4.5/package.json)
+
+Created [](file:///c%3A/Users/v-danlingyin/Documents/microsoft_projects_files/bugBash/26.1/1.9/case2/Claude-Opus-4.5/tsconfig.json)
+
+Created [](file:///c%3A/Users/v-danlingyin/Documents/microsoft_projects_files/bugBash/26.1/1.9/case2/Claude-Opus-4.5/tsconfig.node.json)
+
+Created [](file:///c%3A/Users/v-danlingyin/Documents/microsoft_projects_files/bugBash/26.1/1.9/case2/Claude-Opus-4.5/vite.config.ts)
+
+Created [](file:///c%3A/Users/v-danlingyin/Documents/microsoft_projects_files/bugBash/26.1/1.9/case2/Claude-Opus-4.5/index.html)
+
+Starting: *Create TypeScript type definitions* (3/15)
+
+Now I'll create TypeScript type definitions: 
+
+Created [](file:///c%3A/Users/v-danlingyin/Documents/microsoft_projects_files/bugBash/26.1/1.9/case2/Claude-Opus-4.5/src/types/index.ts)
+
+Starting: *Set up Pinia stores* (4/15)
+
+Now I'll create the Pinia stores: 
+
+Created [](file:///c%3A/Users/v-danlingyin/Documents/microsoft_projects_files/bugBash/26.1/1.9/case2/Claude-Opus-4.5/src/stores/conversation.ts)
+
+Created [](file:///c%3A/Users/v-danlingyin/Documents/microsoft_projects_files/bugBash/26.1/1.9/case2/Claude-Opus-4.5/src/stores/settings.ts)
+
+Starting: *Create router configuration* (5/15)
+
+Now I'll create the router configuration: 
+
+Created [](file:///c%3A/Users/v-danlingyin/Documents/microsoft_projects_files/bugBash/26.1/1.9/case2/Claude-Opus-4.5/src/router/index.ts)
+
+Starting: *Implement layout components* (6/15)
+
+Now I'll create the global layout and header: 
+
+Created [](file:///c%3A/Users/v-danlingyin/Documents/microsoft_projects_files/bugBash/26.1/1.9/case2/Claude-Opus-4.5/src/layouts/DefaultLayout.vue)
+
+Starting: *Implement Home page* (7/15)
+
+Now I'll create the Home page: 
+
+Created [](file:///c%3A/Users/v-danlingyin/Documents/microsoft_projects_files/bugBash/26.1/1.9/case2/Claude-Opus-4.5/src/pages/HomePage.vue)
+
+Starting: *Implement Chat page* (8/15)
+
+Now I'll create the Chat page with message components: 
+
+Created [](file:///c%3A/Users/v-danlingyin/Documents/microsoft_projects_files/bugBash/26.1/1.9/case2/Claude-Opus-4.5/src/pages/ChatPage.vue)
+
+Now I'll create the ChatMessage component: 
+
+Created [](file:///c%3A/Users/v-danlingyin/Documents/microsoft_projects_files/bugBash/26.1/1.9/case2/Claude-Opus-4.5/src/components/ChatMessage.vue)
+
+Starting: *Implement History page* (9/15)
+
+Now I'll create the History page: 
+
+Created [](file:///c%3A/Users/v-danlingyin/Documents/microsoft_projects_files/bugBash/26.1/1.9/case2/Claude-Opus-4.5/src/pages/HistoryPage.vue)
+
+Starting: *Implement Settings page* (10/15)
+
+Now I'll create the Settings page: 
+
+Created [](file:///c%3A/Users/v-danlingyin/Documents/microsoft_projects_files/bugBash/26.1/1.9/case2/Claude-Opus-4.5/src/pages/SettingsPage.vue)
+
+Starting: *Add mock data and utilities* (12/15)
+
+Now I'll create the mock AI utility: 
+
+Created [](file:///c%3A/Users/v-danlingyin/Documents/microsoft_projects_files/bugBash/26.1/1.9/case2/Claude-Opus-4.5/src/utils/mockAI.ts)
+
+Starting: *Create App.vue and main.ts* (13/15)
+
+Now I'll create the root App.vue and main.ts files: 
+
+Created [](file:///c%3A/Users/v-danlingyin/Documents/microsoft_projects_files/bugBash/26.1/1.9/case2/Claude-Opus-4.5/src/App.vue)
+
+Created [](file:///c%3A/Users/v-danlingyin/Documents/microsoft_projects_files/bugBash/26.1/1.9/case2/Claude-Opus-4.5/src/main.ts)
+
+Starting: *Generate README.md* (12/13)
+
+Now I'll create the comprehensive README.md: 
+
+Continue to iterate?
+[object Object]
+
+Made changes.
+
+User: @agent Continue: "Continue to iterate?"
+
+GitHub Copilot: Created [](file:///c%3A/Users/v-danlingyin/Documents/microsoft_projects_files/bugBash/26.1/1.9/case2/Claude-Opus-4.5/README.md)
+
+Starting: *Generate evaluation_report.json* (13/13)
+
+Now I'll create the evaluation report: 
+
+Created [](file:///c%3A/Users/v-danlingyin/Documents/microsoft_projects_files/bugBash/26.1/1.9/case2/Claude-Opus-4.5/evaluation_report.json)
+
+Now let me add a Vite SVG favicon file: 
+
+Created [](file:///c%3A/Users/v-danlingyin/Documents/microsoft_projects_files/bugBash/26.1/1.9/case2/Claude-Opus-4.5/public/vite.svg)
+
+Now I need to add the TypeScript Vite environment declaration file: 
+
+Created [](file:///c%3A/Users/v-danlingyin/Documents/microsoft_projects_files/bugBash/26.1/1.9/case2/Claude-Opus-4.5/src/env.d.ts)
+
+Completed: *Generate evaluation_report.json* (13/13)
+
+Now let me install dependencies and verify the project works: 
+
+Ran terminal command: pnpm install
+
+Dependencies installed successfully. Now let me run the type check to verify TypeScript is correctly configured: 
+
+Ran terminal command: pnpm type-check
+
+Ran terminal command: pnpm dev
+
+Checked background terminal output
+
+The development server is running. Let me open the browser to preview the application: 
+
+Opened Simple Browser at http://localhost:3001
+
+Made changes.
